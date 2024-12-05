@@ -44,7 +44,7 @@ public class PlanoController {
     @GetMapping("/id/{id}")
     public ResponseEntity<Plano> buscarPlanoPorId(@PathVariable Integer id) {
         try {
-            Plano plano = service.buscar(id);
+            Plano plano = service.buscar();
             return new ResponseEntity<>(plano, HttpStatus.OK);
         } catch (NoSuchElementException e) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
@@ -67,7 +67,7 @@ public class PlanoController {
         if (!planos.isEmpty()) {
             return new ResponseEntity<>(planos, HttpStatus.OK);
         }
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT); 
+        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @DeleteMapping("/{id}")
