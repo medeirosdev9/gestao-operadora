@@ -22,3 +22,4 @@ public class PlanoServicoRequestDTO {
         this.servicoAdicional = servicoAdicional;
     }
 }
+

@@ -35,8 +35,7 @@ public class PlanoService {
     }
 
     public Plano buscar(String nome) {
-        return repository.findByNome(nome)
-                .orElseThrow(() -> new NoSuchElementException("Plano com nome '" + nome + "' não encontrado"));
+        return repository.findByNome(nome).orElseThrow(() -> new NoSuchElementException("Plano com nome '" + nome + "' não encontrado"));
     }
 
     public List<Plano> buscar() {

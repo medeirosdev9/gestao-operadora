@@ -27,6 +27,4 @@ public class ServicoAdicional {
 
     @OneToMany(mappedBy = "servico")
     private List<PlanoServico> planos = new ArrayList<>();
-
-
 }
